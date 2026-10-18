@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TimeBuddy - Daily Study Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header>
+        <h1>TimeBuddy</h1>
+        <p>Your Personal Study Planner and Reminder</p>
+        <p>Plan Your Day, Manage Your Time!</p>
+    </header>
+
+    <main>
+
+        <!-- Daily Reminders Section -->
+        <section id="reminders">
+            <h2>Daily Reminders</h2>
+            <p>Add your daily tasks and receive browser notifications.</p>
+
+            <label for="task">Task Name:</label>
+            <input
+                type="text"
+                id="task"
+                placeholder="Enter your task"
+            >
+
+            <label for="time">Reminder Time:</label>
+            <input type="time" id="time">
+
+            <button type="button" onclick="enableNotifications()">
+                Enable Notifications
+            </button>
+
+            <button type="button" onclick="addTask()">
+                Add Task
+            </button>
+
+            <h3>My Reminders</h3>
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- Notes Section -->
+        <section id="notes">
+            <h2>My Notes</h2>
+            <p>Save your important study notes in one place.</p>
+
+            <label for="noteTitle">Note Title:</label>
+            <input
+                type="text"
+                id="noteTitle"
+                placeholder="Enter note title"
+            >
+
+            <label for="noteText">Write Your Note:</label>
+            <textarea
+                id="noteText"
+                rows="5"
+                placeholder="Write your notes here"
+            ></textarea>
+
+            <button type="button" onclick="saveNote()">
+                Save Note
+            </button>
+
+            <h3>Saved Notes</h3>
+            <ul id="noteList"></ul>
+        </section>
+
+        <!-- Important Documents Section -->
+        <section id="documents">
+            <h2>Important Documents</h2>
+            <p>Save and download your important files.</p>
+
+            <label for="file">Choose a Document:</label>
+            <input type="file" id="file">
+
+            <button type="button" onclick="saveDocument()">
+                Save Document
+            </button>
+
+            <h3>My Documents</h3>
+            <ul id="documentList"></ul>
+        </section>
+
+    </main>
+
+    <!-- Website Footer -->
+    <footer>
+        <p>&copy; 2026 TimeBuddy | Your Daily Study Partner</p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
